@@ -29,7 +29,7 @@ function validateAmount(amount) {
   return amount > 0 && !isNaN(amount);
 }
 
-depositBtn.addEventListener("click", () => {
+function handleDeposit() {
   const amount = parseFloat(amountInput.value);
 
   if (validateAmount(amount)) {
@@ -40,7 +40,7 @@ depositBtn.addEventListener("click", () => {
   } else {
     showError();
   }
-});
+}
 
 withdrawBtn.addEventListener("click", () => {
   const amount = parseFloat(amountInput.value);
